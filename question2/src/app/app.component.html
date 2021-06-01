@@ -1,0 +1,16 @@
+<input [ngModel]="lookupText$ | async" (ngModelChange)="onLookupTextChange($event)" />
+
+<table>
+  <thead>
+    <tr>
+      <th scope="category">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let category of caterogies$ | async">
+      <tr>
+        <td>{{ category }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
